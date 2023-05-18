@@ -1,21 +1,73 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  heigth: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.wrapper {
+  display: flex;
+  gap: 40px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.input-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.input-button {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 3px;
+}
+
+.pokemon-card {
+  display: flex;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
+}
+
+.pokemon-card.dead {
+  box-shadow: 0px 0px 5px 0px rgba(183, 42, 51, 1);
+}
+
+.pokemon-header {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.image {
+  width: 200px;
+  transform: translateX(0);
+  border: 3px solid rgba(183, 42, 51, 0);
+  transition: transform 0.1s ease-in-out;
+}
+
+.image.atacked {
+  border: 3px solid red;
+  border-radius: 5px;
+  border: 3px solid rgba(183, 42, 51, 1);
+  transform: translateX(10px);
+}
+
+.pokemon-abilities {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.ability-button {
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
 }
 
 @keyframes logo-spin {

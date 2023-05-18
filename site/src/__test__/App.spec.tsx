@@ -3,5 +3,6 @@ import { render } from "@testing-library/react";
 import App from "../App";
 
 test("app", () => {
-  render(<App></App>);
+  const { debug } = render(<App></App>);
+  debug();
 });
